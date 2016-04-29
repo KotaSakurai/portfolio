@@ -1,3 +1,9 @@
+
+
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+
 /* -------------------- 六角形 -------------------- */
 .hexagon, .hexagon:before, .hexagon:after {
  display: table;
@@ -8,12 +14,61 @@
  background: #208c51;
  text-align:center;
  text-transform:uppercase;
+ color: #fff;
+ z-index: 1;
+}
+
+
+
+
+/*back用*/
+.hexagon_back, .hexagon_back:before, .hexagon_back:after {
+ display: table;
+ position: relative;
+ top:2em;
+ height: 5em;
+ width: 8.66em;
+ background: #CC8D1A;
+ text-align:center;
+ text-transform:uppercase;
+ color: #fff;
+ z-index: 1;
+}
+
+/*cover用*/
+.hexagon_cover, .hexagon_cover:before, .hexagon_cover:after {
+ display: table;
+ position: relative;
+ top:2em;
+ height: 5em;
+ width: 8.66em;
+ 
+ text-align:center;
+ text-transform:uppercase;
  color:#fff;
  z-index: 1;
+}
 
+
+
+
+.hexagon:before, .hexagon:after {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: -100;
 
 }
-.hexagon:before, .hexagon:after {
+.hexagon_back:before, .hexagon_back:after {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: -100;
+
+}
+.hexagon_cover:before, .hexagon_cover:after {
  content: '';
  position: absolute;
  top: 0;
@@ -33,7 +88,36 @@
  transform: rotate(-60deg);
 
 }
+.hexagon_back:before {
+ -ms-transform: rotate(60deg);
+ -webkit-transform: rotate(60deg);
+ transform: rotate(60deg);
+
+}
+.hexagon_back:after {
+ -ms-transform: rotate(-60deg);
+ -webkit-transform: rotate(-60deg);
+ transform: rotate(-60deg);
+
+}
+.hexagon_cover:before {
+ -ms-transform: rotate(60deg);
+ -webkit-transform: rotate(60deg);
+ transform: rotate(60deg);
+
+}
+.hexagon_cover:after {
+ -ms-transform: rotate(-60deg);
+ -webkit-transform: rotate(-60deg);
+ transform: rotate(-60deg);
+
+}
 .hexagon span {
+ display:table-cell;
+ vertical-align:middle;
+
+}
+.hexagon_back span {
  display:table-cell;
  vertical-align:middle;
 
@@ -49,7 +133,7 @@
  -ms-transform: rotate(120deg);
  transform: rotate(120deg);
  overflow: hidden;
- border: 1px solid #ffffff; 
+ /*border: 1px solid #ffffff; */
 
 }
 .hexagon-mask > div, .hexagon-mask > div > div {
@@ -59,7 +143,7 @@
  -ms-transform: rotate(-60deg);
  transform: rotate(-60deg);
  overflow: hidden;
- border: 1px solid #ffffff; 
+ /*border: 1px solid #ffffff;*/ 
 }
 .hexagon-mask img {
  position:relative;
@@ -82,13 +166,22 @@ body {
 }
 
 .contents {
-	position: relative;
+	position: relative;å
 	display: block; /*インライン要素->とらないやつ　場所をとるやつブロック*/
 	margin: 0 auto 0;
-	width: 550px;
+	float: left;
+	left: 50px;
+	/*
+	margin: 0 auto 0;
+	*/
+	width: 90%;
 	min-width: 550px;
-	height: 550px;
+	height: 1000px;
 	background-color : #222222;
+
+	border-top: white double 3px;
+	border-left: white solid 1px;
+	border-right: white solid 1px;
 }
 
 
@@ -137,16 +230,566 @@ body {
 	left: 275px;
 }
 
+#product1 {
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	display:none;
+}
+
+#product2 {
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	display:none;
+}
+
+#product3 {
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	display:none;
+}
+#product4 {
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	display:none;
+}
+#product5 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+#product6 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+
+#profile1 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+#profile2 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+#profile3 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+#profile4 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+#profile5 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+#profile6 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+
+#back{
+	position: absolute;
+	top: 460px;
+	left: 200px;
+	background-color: #CC8D1A;
+}
+
+#cover {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+
+}
+
+/*
+.description {
+	position: relative;
+	display: block; /*インライン要素->とらないやつ　場所をとるやつブロック*/
+	/*margin: 0 auto 0;
+	float: left;
+	margin-left: 100px;
+	margin-top: 100px;
+	width: 550px;
+	min-width: 550px;
+	height: 550px;
+	background-color : #444444;
+}
+*/
+
 .title {
 	color: #ffffff;
-	
+	font-family: 'arial black';
+	font-size: 25px;
+	margin-left: 5px;
+	text-align: center;
+
+}
+
+
+.description {
+  position: absolute;
+  width: 300px; 
+  height: 173.21px;
+  background-color: #219b64;
+  margin: 86.60px 0;
+
+  /*float: left;*/
+
+}
+
+.description:before,
+.description:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+}
+
+.description:before {
+  bottom: 100%;
+  border-bottom: 86.60px solid #219b64;
+}
+
+.description:after {
+  top: 100%;
+  width: 0;
+  border-top: 86.60px solid #219b64;
+}
+
+.description2 {
+  position: relative;
+  width: 250px; 
+  height: 144.34px;
+  background-color: #219b64;
+  margin: 72.17px 0;
+}
+
+.description2:before,
+.description2:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+}
+
+.description2:before {
+  bottom: 100%;
+  border-bottom: 72.17px solid #219b64;
+}
+
+.description2:after {
+  top: 100%;
+  width: 0;
+  border-top: 72.17px solid #219b64;
+}
+
+#des1 {
+	position: absolute;
+	top: 290px;
+    left: 425px;
+    opacity: 0.8;
+}
+
+#des2 {
+	position: absolute;
+	top: 65px;
+	left: 500px;
+	/*
+    left: 605px;*/
+    opacity: 0.8;
+}
+
+#des3 {
+	position: absolute;
+	top: 170px;
+	left: 700px;
+	opacity: 0.8;
+	/*
+	top: 525px;
+    left: 585px;*/
+}
+
+
+.sentence {
+	color: white;
+	font-family: 'Noto Sans Japanese', serif;
+	font-weight: 100;
+	font-size: 15px;
+	margin: 10px;
+
+}
+.consept {
+	color: white;
+	font-family: 'Noto Sans Japanese', serif;
+	font-weight: 100;
+	font-size: 16px;
+	margin-top: 20px;
+	margin-left: 5px;
+	text-align: center;
+
+}
+
+.pic {
+	position: absolute;
+	top: 20px;
+    left: 750px;
+    opacity:0.8;　
+
+}
+
+p {
+	font-size: 15px;
+	font-family: 'Noto Sans Japanese', serif;
+	font-weight: 100;
+	margin-left: 5px;
+	margin-right: 30px;
+}
+
+#name1 {
+	position: absolute;
+    top: 70px;
+    left: 575px;
+    opacity:0.8;　
+    display:none;
+}
+
+#name2 {
+	position: absolute;
+	top: 70px;
+    left: 725px;
+    opacity:0.8;　
+    display:none;
+}
+
+#name3 {
+	position: absolute;
+	top: 200px;
+    left: 500px;
+    opacity:0.8;　
+    display:none;
+}
+#name4 {
+	position: absolute;
+	top: 200px;
+    left: 650px;
+    opacity:0.8;　
+    display:none;
+}
+#name5 {
+	position: absolute;
+	top: 200px;
+    left: 800px;
+    opacity:0.8;　
+    display:none;
+}
+#name6 {
+	position: absolute;
+	top: 200px;
+    left: 950px;
+    opacity:0.8;　
+    display:none;
+}
+
+#name7 {
+	position: absolute;
+	top: 330px;
+    left: 725px;
+    opacity:0.8;　
+    display:none;
+}
+#name8 {
+	position: absolute;
+	top: 330px;
+    left: 875px;
+    opacity:0.8;　
+    display:none;
+}
+#name9 {
+	position: absolute;
+	top: 330px;
+    left: 1025px;
+    opacity:0.8;　
+    display:none;
+}
+#name10 {
+	position: absolute;
+	top: 460px;
+    left: 875px;
+    opacity:0.8;　
+    display:none;
+}
+#name11 {
+	position: absolute;
+	top: 330px;
+    left: 875px;
+    opacity:0.8;　
+    display:none;
 }
 
 
 
 
+.d_product {
+  position: relative;
+  width: 200px; 
+  height: 115.47px;
+  margin: 57.74px 0;
+  
+  background-size: auto 230.9401px;
+  background-position: center;
+  /*
+  border-left: solid 1px #ffffff;
+  border-right: solid 1px #ffffff;*/
+}
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 141.42px;
+  height: 141.42px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 29.29px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 200.0000px;
+  height: 115.47005383792516px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-57.7350px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-57.7350px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-57.7350px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -70.7107px;
+  /*
+  border-top: solid 1.4142px #ffffff;
+  border-right: solid 1.4142px #ffffff;*/
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -70.7107px;
+  /*
+  border-bottom: solid 1.4142px #ffffff;
+  border-left: solid 1.4142px #ffffff;*/
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.d_product:after {
+  content: "";
+  position: absolute;
+  top: 0.5774px;
+  left: 0;
+  width: 200.0000px;
+  height: 115.4701px;
+  z-index: 2;
+  background: inherit;
+}
 
 
 
+
+#d_product1 {
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	display:none;
+}
+#d_product2 {
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	display:none;
+}
+#d_product3 {
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	display:none;
+}
+#d_product4 {
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	display:none;
+}
+#d_product5 {
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	display:none;
+}
+#d_product6 {
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	display:none;
+}
+
+#d_dis_product1 {
+	position: absolute;
+	top: 70px;
+    left: 500px;
+    background-image: url(../image/kameleon.jpg);
+    display: none;
+
+}
+
+#d_dis_product2 {
+	position: absolute;
+	top: 70px;
+    left: 700px;
+    background-image: url(../image/crane.jpg);
+    display: none;
+
+}
+#d_dis_product3 {
+	position: absolute;
+	top: 250px;
+    left: 600px;
+    background-image: url(../image/condled.jpg);
+    display: none;
+}
+
+#d_dis_product4 {
+	position: absolute;
+	top: 250px;
+    left: 800px;
+    background-image: url(../image/todoto.jpg);
+    display: none;
+
+}
+#d_dis_product5 {
+	position: absolute;
+	top: 430px;
+    left: 500px;
+    background-image: url(../image/peng.jpg);
+    display: none;
+}
+
+#d_dis_product6 {
+	position: absolute;
+	top: 70px;
+    left: 700px;
+   
+    display: none;
+
+}
+
+.logo {
+	text-align: center;
+}
+
+
+#skill1 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+#skill2 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+#skill3 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+#skill4 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+#skill5 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+#skill6 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+#skill7 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+#skill8 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+#skill9 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+
+
+.background_blue, .background_blue:before, .background_blue:after {
+	background: #206e8c;
+}
+
+.background_red, .background_red:before, .background_red:after {
+	background: #8c205b;
+}
+
+.background_green, .background_green:before, .background_green:after {
+	background: #21d236;
+}
+
+.background_yellow, .background_yellow:before, .background_yellow:after {
+	background: #d4bd34;
+}
+
+.background_skyblue, .background_skyblue:before, .background_skyblue:after {
+	background: #20738c;
+}
+
+.background_orange, .background_orange:before, .background_orange:after {
+	background: #d28c21;
+}
+
+
+.background_html, .background_html:before, .background_html:after {
+	background: #f06326;
+}
+.background_pho, .background_pho:before, .background_pho:after {
+	background: #1bccdb;
+}
 
 
