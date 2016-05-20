@@ -1,0 +1,60 @@
+.head1 {
+	width: 100%;
+	background-color: #ffffff;
+	margin:0px;
+	color:white;
+	padding: 0px;
+}
+
+.head2 {
+	width: 100%;
+	height: 30px;
+	background-color: #000000;
+}
+
+.head3 {
+	width: 100%;
+	height: 30px;
+	background-color: #333333;
+}
+
+.head_image {
+	position: relative;
+	width: 100%;
+	height: 500px;
+	background-image : url(./image/con_image/back.jpg);
+	background-size: cover;
+}
+
+.sns_button {
+	margin: 30px;
+	position: absolute;
+	bottom: 20px;
+
+}
+
+
+.sentence_body {
+	margin: 70px;
+	
+
+	background-color: #f3f3f3; 
+	letter-spacing: 1px;
+	font-size: 25px;
+}
+
+
+.title_sentence {
+	position: absolute;
+	color: white;
+	font-size: 45px;
+	width: 80%;
+	bottom: 90px;
+	margin-right: 80px;
+	margin-left: 80px;
+	text-align: left;
+}
+
+body {
+	margin: 0px;
+}

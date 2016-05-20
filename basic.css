@@ -13,9 +13,12 @@
  width: 8.66em;
  background: #208c51;
  text-align:center;
- text-transform:uppercase;
+ /*
+ text-transform:uppercase;*/
  color: #fff;
  z-index: 1;
+ 
+ font-family: 'Noto Sans Japanese', serif;
 }
 
 
@@ -30,9 +33,9 @@
  width: 8.66em;
  background: #CC8D1A;
  text-align:center;
- text-transform:uppercase;
  color: #fff;
  z-index: 1;
+ font-family: 'Noto Sans Japanese', serif;
 }
 
 /*cover用*/
@@ -115,8 +118,10 @@
 .hexagon span {
  display:table-cell;
  vertical-align:middle;
+ text-align: center;
 
 }
+
 .hexagon_back span {
  display:table-cell;
  vertical-align:middle;
@@ -166,7 +171,7 @@ body {
 }
 
 .contents {
-	position: relative;å
+	position: relative;
 	display: block; /*インライン要素->とらないやつ　場所をとるやつブロック*/
 	margin: 0 auto 0;
 	float: left;
@@ -176,12 +181,13 @@ body {
 	*/
 	width: 90%;
 	min-width: 550px;
-	height: 1000px;
+	height: 710px;
 	background-color : #222222;
 
 	border-top: white double 3px;
 	border-left: white solid 1px;
 	border-right: white solid 1px;
+	border-bottom: white double 3px;
 }
 
 
@@ -300,9 +306,10 @@ body {
 
 #back{
 	position: absolute;
-	top: 460px;
+	top: 200px;
 	left: 200px;
 	background-color: #CC8D1A;
+	font-family: 'Noto Sans Japanese', serif;
 }
 
 #cover {
@@ -451,7 +458,7 @@ body {
 }
 
 p {
-	font-size: 15px;
+	font-size: 13px;
 	font-family: 'Noto Sans Japanese', serif;
 	font-weight: 100;
 	margin-left: 5px;
@@ -527,14 +534,30 @@ p {
 #name10 {
 	position: absolute;
 	top: 460px;
-    left: 875px;
+    left: 500px;
     opacity:0.8;　
     display:none;
 }
 #name11 {
 	position: absolute;
-	top: 330px;
-    left: 875px;
+	top: 460px;
+    left: 650px;
+    opacity:0.8;　
+    display:none;
+}
+
+#name12 {
+	position: absolute;
+	top: 460px;
+    left: 800px;
+    opacity:0.8;　
+    display:none;
+}
+
+#name13 {
+	position: absolute;
+	top: 460px;
+    left: 950px;
     opacity:0.8;　
     display:none;
 }
@@ -713,6 +736,19 @@ p {
 }
 
 
+#o_product1 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+
+#o_product2 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+
+
 #skill1 {
 	position: absolute;
 	top: 200px;
@@ -759,6 +795,48 @@ p {
 	left: 200px;
 }
 
+#contact1 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+
+#contact2 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+
+#contact3 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+
+#contact4 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+
+#contact5 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+
+#contact6 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+
+#contact1 {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+
 
 .background_blue, .background_blue:before, .background_blue:after {
 	background: #206e8c;
@@ -788,8 +866,119 @@ p {
 .background_html, .background_html:before, .background_html:after {
 	background: #f06326;
 }
+
 .background_pho, .background_pho:before, .background_pho:after {
-	background: #1bccdb;
+	background: #3aacce;
+}
+
+.background_face, .background_face:before, .background_face:after {
+	background: #3b5998;
+}
+
+.background_mail, .background_mail:before, .background_mail:after {
+	background: #dd4b39;
+}
+.background_insta, .background_insta:before, .background_insta:after {
+	background: #125688;
+}
+
+
+
+
+
+
+.link {
+	color: white;
+	text-decoration: none;
+}
+
+#sen3 {
+	font-size: 15px;
+	line-height: 115%;
+
+}
+.td1 {
+	width: 60px;
+}
+
+.o_product_dis {
+  position: relative;
+  width: 400px; 
+   height: 230.94px;
+  background-color: #208c51;
+  margin: 115.47px 0;
+}
+
+.o_product_dis:before,
+.o_product_dis:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+}
+
+.o_product_dis:before {
+  bottom: 100%;
+  border-bottom: 115.47px solid #208c51;
+}
+
+.o_product_dis:after {
+  top: 100%;
+  width: 0;
+  border-top: 115.47px solid #208c51;
+}
+
+#linestamp1 {
+	position: absolute;
+	top: 70px;
+	left: 525px;
+}
+
+#linestamp2 {
+	position: absolute;
+	top: 70px;
+	left: 525px;
+}
+
+.o_product_dis p {
+	color: white;
+	text-align: center;
+}
+
+.stamp {
+	width: 170px;
+	float: left;
+	margin-left: 10px;
+}
+
+footer {
+	color: white;
+	background: #2222222;
+
+	bottom: 5px;
+	width: 100%;
+	position: absolute;
+	height: 20px;
+	text-align: right;
+	
+	
+
+}
+
+.foot_sentence {
+	margin-right: 5px;
+	vertical-align: top;
+	font-family: 'Noto Sans Japanese', serif;
+	
+}
+
+.logo_bottom {
+	color: white;
+	text-align: center;
+	letter-spacing: 0.33em;
+	margin-bottom: 10px;
+	font-weight: 100;
 }
 
 
