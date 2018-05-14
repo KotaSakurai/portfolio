@@ -19,6 +19,7 @@
  z-index: 1;
  
  font-family: 'Noto Sans Japanese', serif;
+
 }
 
 
@@ -979,6 +980,10 @@ footer {
 	letter-spacing: 0.33em;
 	margin-bottom: 10px;
 	font-weight: 100;
+}
+
+.pointer {
+	cursor: pointer;
 }
 
 

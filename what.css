@@ -1,0 +1,106 @@
+.name {
+	writing-mode: tb-rl;
+	
+	font-size: 80px;
+	font-family: serif;
+	color: #aaaaaa;
+}
+
+.left {
+	position: relative;
+	top:110px;
+	left: -100px;
+	float:left;
+}
+
+.right {
+	position: relative;
+	top:110px;
+	left: 360px;
+}
+
+.top {
+	width: 500px;
+	height: 800px;
+	margin: auto;
+	background-image : url(./image/what_image/sakutakuback.png);
+	background-size: cover;
+}
+
+.content {
+	width: 1000px;
+	background-color: #dfdfdf;
+	margin: auto;
+	position: relative;
+}
+
+.circle {
+	width: 300px;
+    height: 300px;
+    -webkit-border-radius: 50%;/* 50%でもOK */
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+	margin: auto;
+	margin-top: 80px;
+}
+
+.saku_image {
+	background-image : url(./image/what_image/image1.jpg);
+	background-size: cover;
+}
+
+.turu_image {
+	background-image : url(./image/what_image/image2.jpg);
+	background-size: cover;
+}
+
+.explain {
+	width: 100%;
+	height:100%;
+	background-color: #aaaaaa;
+}
+
+.ex_text {
+	padding: 40px 40px 60px 40px;
+	font-size: 400%;
+	color: #fff;
+	font-style: italic;
+}
+.ex_word {
+	margin-left: 30px;
+	font-size: 50%;
+}
+
+.half {
+	width: 50%;
+	height: 800px;
+	background-color: inherit;
+	float: left;
+}
+
+.prof_text {
+	width: 380px;
+	margin: 30px 50px 30px 50px;
+	margin-top: 40px;
+	background: #cccccc;
+	padding: 10px;
+}
+
+.quote {
+	padding:1em 1em 1em 3em;
+	position:relative;
+	font-family:"ＭＳ Ｐゴシック",sans-serif;
+}
+
+.quote:before {
+	content:"“";
+	font-size: 500%;
+	line-height:1em;
+	font-family:"ＭＳ Ｐゴシック",sans-serif;
+	color:#999;
+	position:absolute;
+	left:0;
+	top:0;
+
+
+}
